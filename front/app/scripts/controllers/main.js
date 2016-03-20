@@ -9,7 +9,8 @@
  */
 angular.module('frontApp')
   .controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
-    var host = "http://127.0.0.1:3000/";
+    // var host = "http://127.0.0.1:3000";
+    var host = "";
     $scope.itemsPerPage = 15;
     $scope.maxSize = 5;
     $scope.currentPage = 1;
@@ -17,7 +18,7 @@ angular.module('frontApp')
     $scope.getItems = function () {
       $http({
         method: 'GET',
-        url: host + 'rakuten_items.json',
+        url: host + '/rakuten_items.json',
         params: {page: $scope.currentPage}
       })
       .success(function(data, status, headers, config){
