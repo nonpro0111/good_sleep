@@ -10,7 +10,7 @@ class RakutenItemsController < ApplicationController
     # 本当は、workerとかで動かしたい
     def refresh_items
       item = RakutenItem.last
-      unless item.latest_data?
+      unless item.try(:latest_data?)
         new_items = RakutenItem.call_api
         RakutenItem.refresh(new_items)
       end
