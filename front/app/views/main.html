@@ -1,3 +1,4 @@
+<h2>【楽天市場】おすすめストレス対策・快眠関連商品</h2>
 <div class="row marketing" ng-controller="MainCtrl">
   <div class="row">
     <div class="col-sm-6 col-md-4" ng-repeat="result in results">
@@ -10,15 +11,16 @@
       </div>
     </div>
   </div>
-  <span>合計: {{totalItems}}</span> 
-  <uib-pagination
-    total-items="totalItems"
-    items-per-page="itemsPerPage"
-    ng-model="currentPage"
-    ng-change="pageChanged()"
-    max-size="maxSize"
-    previous-text="前へ"
-    next-text="次へ"
-    boundary-link-numbers="true"
-  ></uib-pagination>
+  <div class="center">
+    <uib-pagination
+      total-items="totalItems"
+      items-per-page="itemsPerPage"
+      ng-model="currentPage"
+      ng-change="pageChanged()"
+      max-size="maxSize"
+      previous-text="前へ"
+      next-text="次へ"
+      boundary-link-numbers="true"
+    ></uib-pagination>
+  </div>
 </div>

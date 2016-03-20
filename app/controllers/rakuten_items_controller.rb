@@ -1,19 +1,18 @@
 class RakutenItemsController < ApplicationController
+  before_action :refresh_items, only: :index
 
   def index
     @rakuten_items = RakutenItem.all.page(params[:page])
     @total_item_count = RakutenItem.all.size
-#    items = RakutenWebService::Ichiba::Item.search(:keyword => 'ストレス 睡眠')
-#    @rakuten_items = []
-#    items.each do |item|
-#      next unless item['mediumImageUrls'].first
-#      @rakuten_items << RakutenItem.new(
-#        name: item['itemName'],
-#        price: item['itemPrice'],
-#        image_url: item['mediumImageUrls'].first['imageUrl'],
-#        affiliate_url: item['affiliateUrl']
-#      )
-#    end
-#    RakutenItem.import @rakuten_items
   end
+
+  private
+    # 本当は、workerとかで動かしたい
+    def refresh_items
+      item = RakutenItem.last
+      unless item.latest_data?
+        new_items = RakutenItem.call_api
+        RakutenItem.refresh(new_items)
+      end
+    end
 end
