@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-sm-6 col-md-4" ng-repeat="result in results">
       <div class="thumbnail">
-        <img src={{result.image_url}} alt="{{result.name}}" class="item_image">
+        <img src="{{result.image_url}}" alt="{{result.name}}" class="item_image">
         <div class="caption">
           <a href="{{result.affiliate_url}}" target="_blank">{{result.name | truncate}}</a>
           <p class="price"><span class="label label-danger">{{result.price | currency : '￥' : 0}}</span></p>
