@@ -10,5 +10,13 @@
       <td>{{result.price}}</td>
     </tr>
   </table>
-  <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+  <uib-pagination
+    total-items="totalItems"
+    ng-model="currentPage"
+    ng-change="pageChanged()"
+    max-size="maxSize"
+    previous-text="前へ"
+    next-text="次へ"
+    boundary-link-numbers="true"
+  ></uib-pagination>
 </div>
