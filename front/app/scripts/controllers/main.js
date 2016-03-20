@@ -10,7 +10,7 @@
 angular.module('frontApp')
   .controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
     var host = "http://127.0.0.1:3000/";
-    $scope.itemsPerPage = 10;
+    $scope.itemsPerPage = 15;
     $scope.maxSize = 5;
     $scope.currentPage = 1;
 

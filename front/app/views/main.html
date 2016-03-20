@@ -1,17 +1,19 @@
 <div class="row marketing" ng-controller="MainCtrl">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="result in results">
+      <div class="thumbnail">
+        <img src={{result.image_url}} alt="{{result.name}}" class="item_image">
+        <div class="caption">
+          <a href="{{result.affiliate_url}}" target="_blank">{{result.name | truncate}}</a>
+          <p class="price"><span class="label label-danger">{{result.price | currency : '￥' : 0}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
   <span>合計: {{totalItems}}</span> 
-  <table class="table">
-    <tr>
-      <th>商品名</th>
-      <th>価格</th>
-    </tr>
-    <tr ng-repeat="result in results">
-      <td>{{result.name}}</td>
-      <td>{{result.price}}</td>
-    </tr>
-  </table>
   <uib-pagination
     total-items="totalItems"
+    items-per-page="itemsPerPage"
     ng-model="currentPage"
     ng-change="pageChanged()"
     max-size="maxSize"

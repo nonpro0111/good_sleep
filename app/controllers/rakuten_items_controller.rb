@@ -16,7 +16,4 @@ class RakutenItemsController < ApplicationController
 #    end
 #    RakutenItem.import @rakuten_items
   end
-
-  private
-  j
 end

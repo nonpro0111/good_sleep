@@ -47,22 +47,23 @@
       </div>
     </div>
     <div class="container">
-    <div class="col-md-3">
-      <div class="list-group">
-        <a href="#/rakuten_items" class="list-group-item active">
-          楽天でストレスなく眠る
-        </a>
-        <a href="#/amazon_items" class="list-group-item">
-          Amazonでストレスなく眠る
-        </a>
-        <a href="#" class="list-group-item">
-          ストレスと睡眠
-        </a>
+    <div class="rows">
+      <div class="col-md-3">
+        <div class="list-group">
+          <a href="#/rakuten_items" class="list-group-item active">
+            楽天でストレスなく眠る
+          </a>
+          <a href="#/amazon_items" class="list-group-item">
+            Amazonでストレスなく眠る
+          </a>
+          <a href="#" class="list-group-item">
+            ストレスと睡眠
+          </a>
+        </div>
+      </div>
+      <div class="col-md-9" ng-view></div>
       </div>
     </div>
-    <div class="col-md-9" ng-view></div>
-    </div>
-
     <div class="footer">
       <div class="container">
       </div>
@@ -92,6 +93,7 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_ja-jp.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -99,6 +101,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/filters/myfilter.js"></script>
         <!-- endbuild -->
 </body>
 </html>
