@@ -1,0 +1,26 @@
+<h2>その他快眠関連商品</h2>
+<div class="row marketing item-list" ng-controller="SleepGoodsCtrl">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="result in results">
+      <div class="thumbnail">
+        <img src="{{result.image_url}}" alt="{{result.name}}" class="item_image">
+        <div class="caption">
+          <a href="{{result.affiliate_url}}" target="_blank">{{result.name | truncate}}</a>
+          <p class="price"><span class="label label-danger">{{result.price | currency : '￥' : 0}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <uib-pagination
+      total-items="totalItems"
+      items-per-page="itemsPerPage"
+      ng-model="currentPage"
+      ng-change="pageChanged()"
+      max-size="maxSize"
+      previous-text="前へ"
+      next-text="次へ"
+      boundary-link-numbers="true"
+    ></uib-pagination>
+  </div>
+</div>
