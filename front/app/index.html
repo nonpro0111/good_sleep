@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+    <title>睡眠中の「歯ぎしり」と「うなり声」解消室</title>
+    <meta name="description" content="睡眠中の「歯ぎしり」と「うなり声」を解消するための原因・予防方法をまとめています。睡眠中の「歯ぎしり」と「うなり声」はストレスによるものが主な原因です。ストレスを解消することで「歯ぎしり」と「うなり声」を解消することができます。">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -32,7 +32,7 @@
               <span class="icon-bar"></span>
             </button>
             -->
-            <a class="navbar-brand" href="/">良い睡眠のためのストレス解消グッズ市場</a>
+            <a class="navbar-brand" href="/">睡眠中の「歯ぎしり・うなり声」解消室</a>
           </div>
 
           <!--
@@ -49,17 +49,20 @@
     <div class="container">
     <div class="rows">
       <div class="col-md-3">
-        <div class="list-group">
-          <a href="/rakuten_items" class="list-group-item active">
-            楽天でストレスなく眠る
-          </a>
-          <a href="/amazon_items" class="list-group-item">
-            Amazonでストレスなく眠る
-          </a>
-          <a href="#" class="list-group-item">
-            ストレスと睡眠
-          </a>
-        </div>
+        <ul class="nav nav-pills nav-stacked">
+          <li role="presentation">
+            <a href="#/">TOP</a>
+          </li>
+          <li role="presentation">
+            <a href="#/hagishiri">ストレスと歯ぎしり</a>
+          </li>
+          <li role="presentation">
+            <a href="#/unarigoe">ストレスとうなり声</a>
+          </li>
+          <li role="presentation">
+            <a href="#/sleep_goods">その他快眠関連商品</a>
+          </li>
+        </ul>
       </div>
       <div class="col-md-9" ng-view></div>
       </div>
@@ -102,6 +105,9 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/filters/myfilter.js"></script>
+        <script src="scripts/controllers/hagishiri.js"></script>
+        <script src="scripts/controllers/unarigoe.js"></script>
+        <script src="scripts/controllers/sleep_goods.js"></script>
         <!-- endbuild -->
 </body>
 </html>

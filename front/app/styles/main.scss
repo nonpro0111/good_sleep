@@ -39,21 +39,23 @@ body {
   }
 }
 
-.thumbnail {
-  height: 350px;
-  border: none;
+.item-list {
+  .thumbnail {
+    height: 350px;
+    border: none;
 
-  .item_image {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+    .item_image {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
 
-  .price {
-    margin-top: 0.5em;
-    font-size: 1em;
+    .price {
+      margin-top: 0.5em;
+      font-size: 1em;
 
-    .label {
-      font-size: 100%;
+      .label {
+        font-size: 100%;
+      }
     }
   }
 }

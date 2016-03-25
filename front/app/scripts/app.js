@@ -18,11 +18,10 @@ angular
     'ngTouch',
     'ui.bootstrap'
   ])
-  .config(function ($routeProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
-
+  .config(function ($routeProvider) {
+  //.config(function ($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/rakuten_items', {
+      .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
@@ -31,6 +30,26 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/hagishiri', {
+        templateUrl: 'views/hagishiri.html',
+        controller: 'HagishiriCtrl',
+        controllerAs: 'hagishiri'
+      })
+      .when('/hagishiri', {
+        templateUrl: 'views/hagishiri.html',
+        controller: 'HagishiriCtrl',
+        controllerAs: 'hagishiri'
+      })
+      .when('/unarigoe', {
+        templateUrl: 'views/unarigoe.html',
+        controller: 'UnarigoeCtrl',
+        controllerAs: 'unarigoe'
+      })
+      .when('/sleep_goods', {
+        templateUrl: 'views/sleep_goods.html',
+        controller: 'SleepGoodsCtrl',
+        controllerAs: 'sleepGoods'
       })
       .otherwise({
         redirectTo: '/'

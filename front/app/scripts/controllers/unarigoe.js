@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc function
- * @name frontApp.controller:MainCtrl
+ * @name frontApp.controller:UnarigoeCtrl
  * @description
- * # MainCtrl
+ * # UnarigoeCtrl
  * Controller of the frontApp
  */
 angular.module('frontApp')
-  .controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
+  .controller('UnarigoeCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  }]);
+  });
