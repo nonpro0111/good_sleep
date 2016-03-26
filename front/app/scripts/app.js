@@ -18,8 +18,10 @@ angular
     'ngTouch',
     'ui.bootstrap'
   ])
-  .config(function ($routeProvider) {
-  //.config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+  //   .config(function ($routeProvider) {
+    $locationProvider.html5Mode(true);
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
