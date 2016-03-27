@@ -48,12 +48,12 @@
             <a class="navbar-brand" href="/">睡眠中の「歯ぎしり・うなり声」解消室</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="MenuCtrl">
 
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/hagishiri">ストレスと歯ぎしり</a></li>
-              <li><a href="/unarigoe">ストレスとうなり声</a></li>
-              <li><a href="/sleep_goods">その他快眠関連商品</a></li>
+              <li ng-class="{active: isActive('/hagishiri')}"><a href="/hagishiri">ストレスと歯ぎしり</a></li>
+              <li ng-class="{active: isActive('/unarigoe')}"><a href="/unarigoe">ストレスとうなり声</a></li>
+              <li ng-class="{active: isActive('/sleep_goods')}"><a href="/sleep_goods">その他快眠関連商品</a></li>
             </ul>
           </div>
         </div>
@@ -82,11 +82,11 @@
         <div class="page-header">
           <h5><strong>メニュー</strong></h5>
         </div>
-        <div class="list-group" style="margin-top: 20px;">
-          <a href="/" class="list-group-item">HOME</a>
-          <a href="/hagishiri" class="list-group-item">ストレスと歯ぎしり</a>
-          <a href="/unarigoe" class="list-group-item">ストレスとうなり声</a>
-          <a href="/sleep_goods" class="list-group-item">その他快眠関連商品</a>
+        <div class="list-group" style="margin-top: 20px;" ng-controller="MenuCtrl">
+          <a href="/" class="list-group-item" ng-class="{active: isActive('/')}">HOME</a>
+          <a href="/hagishiri" class="list-group-item" ng-class="{active: isActive('/hagishiri')}">ストレスと歯ぎしり</a>
+          <a href="/unarigoe" class="list-group-item" ng-class="{active: isActive('/unarigoe')}">ストレスとうなり声</a>
+          <a href="/sleep_goods" class="list-group-item" ng-class="{active: isActive('/sleep_goods')}">その他快眠関連商品</a>
         </div>
         <div class="page-header">
           <h5>About Me</h5>
@@ -131,6 +131,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/menu.js"></script>
         <script src="scripts/filters/myfilter.js"></script>
         <script src="scripts/controllers/hagishiri.js"></script>
         <script src="scripts/controllers/unarigoe.js"></script>
